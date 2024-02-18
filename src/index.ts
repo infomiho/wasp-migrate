@@ -187,7 +187,13 @@ function assertWaspVersion(): void {
 }
 
 function obtainProjectDirName(): string {
-  const projectDirName = process.argv[2].replace(/\/$/, '');
+  // Added a check for the project name
+  const inputArg = process.argv[2];
+  if (!inputArg) {
+    console.error('Error: Please provide the name of the project.');
+    process.exit(1);
+  }
+  const projectDirName = inputArg.replace(/\/$/, '');
   if (projectDirName.split(path.sep).length > 1) {
     console.error('Error: Please provide the name of the project, not the path.');
     process.exit(1);

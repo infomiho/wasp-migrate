@@ -1,3 +1,6 @@
+> [!NOTE]  
+> This repository was moved to https://github.com/wasp-lang/wasp-migrate
+
 # Wasp Migrate
 
 Run this migration script by running `npx ilakovac-wasp-migrate <dir>` in your terminal while positioned in the parent dir of your project.
